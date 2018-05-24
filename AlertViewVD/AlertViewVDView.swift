@@ -34,7 +34,7 @@ public class AlertViewVDView: UIView {
     let nibName = "AlertViewVDView"
     var contentView: UIView!
     
-    var buttonTitle: String {
+    public var buttonTitle: String {
         get {
             return bottomButton.titleLabel?.text ?? ""
         }
@@ -44,7 +44,7 @@ public class AlertViewVDView: UIView {
         }
     }
     
-    var firstSuntitleText: String {
+    public var firstSuntitleText: String {
         get{
             return firstSubtitle.text ?? ""
         }
@@ -54,7 +54,7 @@ public class AlertViewVDView: UIView {
         }
     }
     
-    var secondSuntitleText: String {
+    public var secondSuntitleText: String {
         get{
             return secondSubtitle.text ?? ""
         }
@@ -64,7 +64,7 @@ public class AlertViewVDView: UIView {
         }
     }
     
-    var closeImg: UIImage{
+    public var closeImg: UIImage{
         get {
             return closeImage.image ?? UIImage()
         }
@@ -74,7 +74,7 @@ public class AlertViewVDView: UIView {
         }
     }
     
-    var centerImg: UIImage{
+    public var centerImg: UIImage{
         get {
             return centerImage.image ?? UIImage()
         }
