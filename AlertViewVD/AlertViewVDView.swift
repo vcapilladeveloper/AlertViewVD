@@ -64,6 +64,16 @@ public class AlertViewVDView: UIView {
         }
     }
     
+    public var textForTitle: String {
+        get{
+            return title.text ?? ""
+        }
+        set{
+            title.isHidden = false
+            title.text = newValue
+        }
+    }
+    
     public var closeImg: UIImage{
         get {
             return closeImage.image ?? UIImage()
