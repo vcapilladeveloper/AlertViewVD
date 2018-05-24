@@ -115,6 +115,7 @@ public class AlertViewVDView: UIView {
         // The view inside NIB
         self.contentView = nib.instantiate(withOwner: self, options: nil).first as! UIView
         // Add contetView that we get from nib inside bundle, in this class View hierarchy
+        contentView.bounds = self.bounds
         addSubview(contentView)
         
         // Set contetnView equal bounds of the parent view
