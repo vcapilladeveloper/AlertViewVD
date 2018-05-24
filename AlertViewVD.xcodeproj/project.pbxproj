@@ -10,6 +10,8 @@
 		678901C220B6A7AE0077E4CD /* AlertViewVD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 678901B820B6A7AE0077E4CD /* AlertViewVD.framework */; };
 		678901C720B6A7AE0077E4CD /* AlertViewVDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678901C620B6A7AE0077E4CD /* AlertViewVDTests.swift */; };
 		678901C920B6A7AE0077E4CD /* AlertViewVD.h in Headers */ = {isa = PBXBuildFile; fileRef = 678901BB20B6A7AE0077E4CD /* AlertViewVD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		678901D320B6A8390077E4CD /* AlertViewVDView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 678901D220B6A8390077E4CD /* AlertViewVDView.xib */; };
+		678901D520B6A8420077E4CD /* AlertViewVDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678901D420B6A8420077E4CD /* AlertViewVDView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		678901C120B6A7AE0077E4CD /* AlertViewVDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlertViewVDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		678901C620B6A7AE0077E4CD /* AlertViewVDTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewVDTests.swift; sourceTree = "<group>"; };
 		678901C820B6A7AE0077E4CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		678901D220B6A8390077E4CD /* AlertViewVDView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertViewVDView.xib; sourceTree = "<group>"; };
+		678901D420B6A8420077E4CD /* AlertViewVDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewVDView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,8 @@
 			children = (
 				678901BB20B6A7AE0077E4CD /* AlertViewVD.h */,
 				678901BC20B6A7AE0077E4CD /* Info.plist */,
+				678901D220B6A8390077E4CD /* AlertViewVDView.xib */,
+				678901D420B6A8420077E4CD /* AlertViewVDView.swift */,
 			);
 			path = AlertViewVD;
 			sourceTree = "<group>";
@@ -148,6 +154,7 @@
 				TargetAttributes = {
 					678901B720B6A7AE0077E4CD = {
 						CreatedOnToolsVersion = 9.3.1;
+						LastSwiftMigration = 0930;
 					};
 					678901C020B6A7AE0077E4CD = {
 						CreatedOnToolsVersion = 9.3.1;
@@ -177,6 +184,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				678901D320B6A8390077E4CD /* AlertViewVDView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				678901D520B6A8420077E4CD /* AlertViewVDView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +348,7 @@
 		678901CD20B6A7AE0077E4CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -356,6 +366,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.vcapilladeveloper.AlertViewVD;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +375,7 @@
 		678901CE20B6A7AE0077E4CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -389,6 +401,7 @@
 		678901D020B6A7AE0077E4CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N7AZRND92Z;
 				INFOPLIST_FILE = AlertViewVDTests/Info.plist;
@@ -407,6 +420,7 @@
 		678901D120B6A7AE0077E4CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N7AZRND92Z;
 				INFOPLIST_FILE = AlertViewVDTests/Info.plist;
