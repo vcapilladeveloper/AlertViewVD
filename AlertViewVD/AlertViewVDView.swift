@@ -94,9 +94,7 @@ public class AlertViewVDView: UIView {
         }
     }
     
-    
     // MARK: Set up View
-    
     public override init(frame: CGRect) {
         // For use in cado
         super.init(frame: frame)
@@ -129,7 +127,7 @@ public class AlertViewVDView: UIView {
         title.text = ""
         firstSubtitle.text = ""
         secondSubtitle.text = ""
-        
+        roundCorner()
     }
     
     // Allow view to control itself
@@ -138,10 +136,10 @@ public class AlertViewVDView: UIView {
         self.layoutIfNeeded()
         self.contentView.layer.masksToBounds = true
         self.contentView.clipsToBounds = true
-        roundCorner()
+        print("ROUNDED ")
     }
     
-    func roundCorner() {
+    public func roundCorner() {
         if #available(iOS 11.0, *) {
             alertViewContainer.layer.cornerRadius = CGFloat(10.0)
             alertViewContainer.clipsToBounds = true
