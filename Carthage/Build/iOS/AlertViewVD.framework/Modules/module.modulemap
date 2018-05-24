@@ -1,0 +1,11 @@
+framework module AlertViewVD {
+  umbrella header "AlertViewVD.h"
+
+  export *
+  module * { export * }
+}
+
+module AlertViewVD.Swift {
+    header "AlertViewVD-Swift.h"
+    requires objc
+}
