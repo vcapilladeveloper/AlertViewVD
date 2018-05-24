@@ -142,11 +142,17 @@ public class AlertViewVDView: UIView {
     }
     
     func roundCorner() {
-         let path = UIBezierPath(roundedRect: alertViewContainer.bounds, byRoundingCorners: [.topLeft, .topRight], cornerRadii: CGSize(width: 10.0, height: 10.0))
-        let maskLayer = CAShapeLayer()
-        maskLayer.frame = self.bounds
-        maskLayer.path = path.cgPath
-        alertViewContainer.layer.mask = maskLayer
+        if #available(iOS 11.0, *) {
+            alertViewContainer.layer.cornerRadius = CGFloat(10.0)
+            alertViewContainer.clipsToBounds = true
+            alertViewContainer.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        } else {
+            // Fallback on earlier versions
+            let path = UIBezierPath(roundedRect: alertViewContainer.bounds, byRoundingCorners: [.topLeft, .topRight], cornerRadii: CGSize(width: 10.0, height: 10.0))
+            let maskLayer = CAShapeLayer()
+            maskLayer.frame = alertViewContainer.bounds
+            maskLayer.path = path.cgPath
+            alertViewContainer.layer.mask = maskLayer
+        }
     }
-    
 }
