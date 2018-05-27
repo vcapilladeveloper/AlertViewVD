@@ -88,7 +88,6 @@ public class AlertViewVDView: UIView {
         get {
             return centerImage.image ?? UIImage()
         }
-        
         set {
             centerImage.image = newValue
         }
@@ -129,6 +128,15 @@ public class AlertViewVDView: UIView {
         firstSubtitle.text = ""
         secondSubtitle.text = ""
         roundCorner()
+    }
+    
+    public override func didMoveToSuperview() {
+        super.didMoveToSuperview()
+        self.contentView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+        UIView.animate(withDuration: 0.15, animations: {
+            self.contentView.alpha = 1.0
+            self.contentView.transform = CGAffineTransform.identity
+        })
     }
     
     // Allow view to control itself
