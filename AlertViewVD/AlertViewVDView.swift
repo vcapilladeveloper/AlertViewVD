@@ -24,7 +24,7 @@ public class AlertViewVDView: UIView {
     @IBOutlet weak var alertViewContainer: UIView!
     
     @IBAction func dismissView(_ sender: UIButton) {
-        UIView.animate(withDuration: 1.15, animations: {
+        UIView.animate(withDuration: 0.35, animations: {
             self.alertViewContainer.frame.origin.y = self.contentView.frame.height
             //self.contentView.transform = CGAffineTransform.identity
         }){ _ in
@@ -141,7 +141,7 @@ public class AlertViewVDView: UIView {
         super.didMoveToSuperview()
         let originalY = alertViewContainer.frame.origin.y
         alertViewContainer.frame.origin.y = contentView.frame.height
-        UIView.animate(withDuration: 1.15, animations: {
+        UIView.animate(withDuration: 0.35, animations: {
             self.alertViewContainer.frame.origin.y = originalY
             //self.contentView.transform = CGAffineTransform.identity
         })
