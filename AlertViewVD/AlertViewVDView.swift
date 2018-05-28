@@ -132,10 +132,11 @@ public class AlertViewVDView: UIView {
     
     public override func didMoveToSuperview() {
         super.didMoveToSuperview()
-        self.contentView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+        let originalY = alertViewContainer.frame.origin.y
+        alertViewContainer.frame.origin.y = contentView.frame.height
         UIView.animate(withDuration: 0.15, animations: {
-            self.contentView.alpha = 1.0
-            self.contentView.transform = CGAffineTransform.identity
+            self.alertViewContainer.frame.origin.y = originalY
+            //self.contentView.transform = CGAffineTransform.identity
         })
     }
     
