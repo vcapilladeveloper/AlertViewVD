@@ -26,12 +26,10 @@ public class AlertViewVDView: UIView {
     @IBAction func dismissView(_ sender: UIButton) {
         UIView.animate(withDuration: 0.35, animations: {
             self.alertViewContainer.frame.origin.y = self.contentView.frame.height
-            //self.contentView.transform = CGAffineTransform.identity
+            self.contentView.alpha = 0.0
         }){ _ in
             self.removeFromSuperview()
-            
         }
-        
     }
     
     @IBAction func pushBottomButton(_ sender: UIButton) {
@@ -41,11 +39,38 @@ public class AlertViewVDView: UIView {
     let nibName = "AlertViewVDView"
     var contentView: UIView!
     
+    public var titleColor: UIColor {
+        get{
+            return title.textColor
+        }
+        set{
+            title.textColor = newValue
+        }
+    }
+    
+    public var firstSubtitleColor: UIColor {
+        get{
+            return firstSubtitle.textColor
+        }
+        set{
+            firstSubtitle.textColor = newValue
+        }
+    }
+    
+    public var secondSubtitleColor: UIColor {
+        get{
+            return secondSubtitle.textColor
+        }
+        set{
+            secondSubtitle.textColor = newValue
+        }
+    }
+    
     public var buttonTitle: String {
         get {
             return bottomButton.titleLabel?.text ?? ""
         }
-        
+    
         set {
             bottomButton.setTitle(newValue, for: .normal)
         }
@@ -141,9 +166,10 @@ public class AlertViewVDView: UIView {
         super.didMoveToSuperview()
         let originalY = alertViewContainer.frame.origin.y
         alertViewContainer.frame.origin.y = contentView.frame.height
+        contentView.alpha = 0.0
         UIView.animate(withDuration: 0.35, animations: {
             self.alertViewContainer.frame.origin.y = originalY
-            //self.contentView.transform = CGAffineTransform.identity
+            self.contentView.alpha = 1.0
         })
     }
     
@@ -153,7 +179,6 @@ public class AlertViewVDView: UIView {
         self.layoutIfNeeded()
         self.contentView.layer.masksToBounds = true
         self.contentView.clipsToBounds = true
-        print("ROUNDED ")
     }
     
     public func roundCorner() {
