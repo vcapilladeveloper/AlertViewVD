@@ -12,6 +12,7 @@
 		678901C920B6A7AE0077E4CD /* AlertViewVD.h in Headers */ = {isa = PBXBuildFile; fileRef = 678901BB20B6A7AE0077E4CD /* AlertViewVD.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		678901D320B6A8390077E4CD /* AlertViewVDView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 678901D220B6A8390077E4CD /* AlertViewVDView.xib */; };
 		678901D520B6A8420077E4CD /* AlertViewVDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678901D420B6A8420077E4CD /* AlertViewVDView.swift */; };
+		678A78F820C707940045CC22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 678A78F720C707940045CC22 /* Assets.xcassets */; };
 		67B121E620BB537900EF28AC /* LargeAlertViewVDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B121E520BB537900EF28AC /* LargeAlertViewVDView.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,7 @@
 		678901C820B6A7AE0077E4CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		678901D220B6A8390077E4CD /* AlertViewVDView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertViewVDView.xib; sourceTree = "<group>"; };
 		678901D420B6A8420077E4CD /* AlertViewVDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewVDView.swift; sourceTree = "<group>"; };
+		678A78F720C707940045CC22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67B121E420BB4EE800EF28AC /* LargeAlertViewVDView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LargeAlertViewVDView.xib; sourceTree = "<group>"; };
 		67B121E520BB537900EF28AC /* LargeAlertViewVDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeAlertViewVDView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,6 +86,7 @@
 				67B121E420BB4EE800EF28AC /* LargeAlertViewVDView.xib */,
 				678901D420B6A8420077E4CD /* AlertViewVDView.swift */,
 				67B121E520BB537900EF28AC /* LargeAlertViewVDView.swift */,
+				678A78F720C707940045CC22 /* Assets.xcassets */,
 			);
 			path = AlertViewVD;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				678A78F820C707940045CC22 /* Assets.xcassets in Resources */,
 				678901D320B6A8390077E4CD /* AlertViewVDView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -108,7 +108,7 @@ public class AlertViewVDView: UIView {
     
     public var closeImg: UIImage{
         get {
-            return closeImage.image ?? UIImage()
+            return closeImage.image ?? #imageLiteral(resourceName: "close_default")
         }
         
         set {
@@ -118,7 +118,7 @@ public class AlertViewVDView: UIView {
     
     public var centerImg: UIImage{
         get {
-            return centerImage.image ?? UIImage()
+            return centerImage.image ?? #imageLiteral(resourceName: "success_icon")
         }
         set {
             centerImage.image = newValue
