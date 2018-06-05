@@ -159,8 +159,9 @@ public class AlertViewVDView: UIView {
         title.text = ""
         firstSubtitle.text = ""
         secondSubtitle.text = ""
-        closeImg = #imageLiteral(resourceName: "close_default")
-        centerImg = #imageLiteral(resourceName: "success_icon")
+        
+        closeImg = UIImage(named: "close_default", in: bundle, compatibleWith: nil)!
+        centerImg = UIImage(named: "success_icon", in: bundle, compatibleWith: nil)!
         roundCorner()
     }
     
