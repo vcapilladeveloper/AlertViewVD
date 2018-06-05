@@ -108,7 +108,7 @@ public class AlertViewVDView: UIView {
     
     public var closeImg: UIImage{
         get {
-            return closeImage.image ?? #imageLiteral(resourceName: "close_default")
+            return closeImage.image ?? UIImage()
         }
         
         set {
@@ -118,7 +118,7 @@ public class AlertViewVDView: UIView {
     
     public var centerImg: UIImage{
         get {
-            return centerImage.image ?? #imageLiteral(resourceName: "success_icon")
+            return centerImage.image ?? UIImage()
         }
         set {
             centerImage.image = newValue
@@ -167,6 +167,13 @@ public class AlertViewVDView: UIView {
         let originalY = alertViewContainer.frame.origin.y
         alertViewContainer.frame.origin.y = contentView.frame.height
         contentView.alpha = 0.0
+        if closeImg == UIImage() {
+            closeImg = #imageLiteral(resourceName: "close_default")
+        }
+        
+        if centerImg == UIImage() {
+            centerImg = #imageLiteral(resourceName: "success_icon")
+        }
         UIView.animate(withDuration: 0.35, animations: {
             self.alertViewContainer.frame.origin.y = originalY
             self.contentView.alpha = 1.0
