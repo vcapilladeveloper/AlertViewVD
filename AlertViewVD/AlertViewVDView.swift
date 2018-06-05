@@ -8,6 +8,7 @@
 
 protocol AlertViewDelegate {
     func actionButton()
+    func closeButton()
 }
 
 public class AlertViewVDView: UIView {
@@ -28,6 +29,7 @@ public class AlertViewVDView: UIView {
             self.alertViewContainer.frame.origin.y = self.contentView.frame.height
             self.contentView.alpha = 0.0
         }){ _ in
+            self.delegate?.closeButton()
             self.removeFromSuperview()
         }
     }
