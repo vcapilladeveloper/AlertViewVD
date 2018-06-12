@@ -31,10 +31,15 @@ public class AlertViewVDView: UIView {
     }
     
     @IBAction func pushBottomButton(_ sender: UIButton) {
-        if let action = self.okAction{
-            action()
+        UIView.animate(withDuration: 0.35, animations: {
+            self.alertViewContainer.frame.origin.y = self.contentView.frame.height
+            self.contentView.alpha = 0.0
+        }){ _ in
+            if let action = self.okAction{
+                action()
+            }
+            self.removeFromSuperview()
         }
-        self.removeFromSuperview()
     }
     
     let nibName = "AlertViewVDView"
@@ -197,7 +202,7 @@ public class AlertViewVDView: UIView {
     
     
     public func addCloseAction(_ action: @escaping ()->Void){
-        self.okAction = action
+        self.cancelAction = action
     }
     
     public func roundCorner() {
