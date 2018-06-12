@@ -6,14 +6,8 @@
 //  Copyright © 2018 Victor Capilla Borrego. All rights reserved.
 //
 
-protocol AlertViewDelegate {
-    func actionButton()
-    func closeButton()
-}
-
 public class AlertViewVDView: UIView {
-    
-    var delegate: AlertViewDelegate?
+
     
     @IBOutlet weak var closeImage: UIImageView!
     @IBOutlet weak var centerImage: UIImageView!
@@ -29,17 +23,26 @@ public class AlertViewVDView: UIView {
             self.alertViewContainer.frame.origin.y = self.contentView.frame.height
             self.contentView.alpha = 0.0
         }){ _ in
-            self.delegate?.closeButton()
+            if let action = self.cancelAction{
+                action()
+            }
             self.removeFromSuperview()
         }
     }
     
     @IBAction func pushBottomButton(_ sender: UIButton) {
-        delegate?.actionButton()
+        if let action = self.okAction{
+            action()
+        }
+        self.removeFromSuperview()
     }
     
     let nibName = "AlertViewVDView"
     var contentView: UIView!
+    
+    var action: (()->Void)?
+    var okAction: (()->Void)?
+    var cancelAction: (()->Void)?
     
     public var titleColor: UIColor {
         get{
@@ -74,6 +77,7 @@ public class AlertViewVDView: UIView {
         }
     
         set {
+            bottomButton.isHidden = false
             bottomButton.setTitle(newValue, for: .normal)
         }
     }
@@ -184,6 +188,16 @@ public class AlertViewVDView: UIView {
         self.layoutIfNeeded()
         self.contentView.layer.masksToBounds = true
         self.contentView.clipsToBounds = true
+    }
+    
+    public func addOkAction(_ action: @escaping ()->Void){
+        self.okAction = action
+        bottomButton.isHidden = false
+    }
+    
+    
+    public func addCloseAction(_ action: @escaping ()->Void){
+        self.okAction = action
     }
     
     public func roundCorner() {
