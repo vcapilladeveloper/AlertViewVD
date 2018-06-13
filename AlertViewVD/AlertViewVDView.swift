@@ -87,6 +87,17 @@ public class AlertViewVDView: UIView {
         }
     }
     
+    public var buttonColor: UIColor {
+        get{
+            return bottomButton.backgroundColor ?? UIColor.white
+        }
+        
+        set{
+            bottomButton.backgroundColor = newValue
+        }
+    }
+    
+    
     public var firstSuntitleText: String {
         get{
             return firstSubtitle.text ?? ""
