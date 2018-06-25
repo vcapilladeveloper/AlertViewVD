@@ -6,10 +6,7 @@
 //  Copyright © 2018 Victor Capilla Borrego. All rights reserved.
 //
 
-import Foundation
-import UIKit
-
-class LargeAlertViewVDView: UIView {
+public class LargeAlertViewVDView: UIView {
     
     let nibName = "LargeAlertViewVDView"
     var contentView: UIView!
@@ -55,7 +52,7 @@ class LargeAlertViewVDView: UIView {
         setUp()
     }
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         setUp()
     }
@@ -115,18 +112,18 @@ class LargeAlertViewVDView: UIView {
         })
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
 
 extension LargeAlertViewVDView: UITableViewDataSource {
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let elements = tableViewElements { return elements.count } else { return 0}
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let elements = tableViewElements {
         
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCustomCell
@@ -139,7 +136,7 @@ extension LargeAlertViewVDView: UITableViewDataSource {
     
 }
 
-struct TableViewElement {
+public struct TableViewElement {
     var first: String = ""
     var second: String = ""
     var third: String = ""

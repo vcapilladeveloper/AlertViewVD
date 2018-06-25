@@ -7,7 +7,6 @@
 //
 
 public class AlertViewVDView: UIView {
-
     
     @IBOutlet weak var closeImage: UIImageView!
     @IBOutlet weak var centerImage: UIImageView!
