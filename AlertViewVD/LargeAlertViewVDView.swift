@@ -140,4 +140,10 @@ public struct TableViewElement {
     var first: String = ""
     var second: String = ""
     var third: String = ""
+    public init(_ first: String, _ second: String, _ third: String) {
+        self.first = first
+        self.second = second
+        self.third = third
+    }
+    
 }
