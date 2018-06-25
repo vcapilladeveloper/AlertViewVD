@@ -132,8 +132,11 @@ extension LargeAlertViewVDView: UITableViewDataSource {
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let elements = tableViewElements {
-        
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCustomCell
+            let bundle = Bundle(for: type(of: self))
+            // Get the nib form bundle
+            
+            let cell = bundle.loadNibNamed("TableViewCustomCell", owner: self, options: nil)?.first as! TableViewCustomCell
+
             cell.setUp(elements[indexPath.row])
             return cell
             
