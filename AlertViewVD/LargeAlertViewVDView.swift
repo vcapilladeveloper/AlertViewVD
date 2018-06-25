@@ -31,7 +31,7 @@ public class LargeAlertViewVDView: UIView {
         }
     }
     
-    @IBOutlet var tableView: UITableView!
+    @IBOutlet public var tableView: UITableView!
     
     @IBOutlet var closeImg: UIImageView!
     
