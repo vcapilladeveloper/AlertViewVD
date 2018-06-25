@@ -52,11 +52,6 @@ public class LargeAlertViewVDView: UIView {
         setUp()
     }
     
-    public override init(frame: CGRect) {
-        super.init(frame: frame)
-        setUp()
-    }
-    
     public var titleText: String {
         set{
             titleLabel.text = newValue
@@ -68,7 +63,7 @@ public class LargeAlertViewVDView: UIView {
     }
     
     private func setUp() {
-        tableView.dataSource = self
+        
         let bundle = Bundle(for: type(of: self))
         // Get the nib form bundle
         let nib = UINib(nibName: self.nibName, bundle: bundle)
@@ -86,6 +81,7 @@ public class LargeAlertViewVDView: UIView {
         closeImg.image = UIImage(named: "close_default", in: bundle, compatibleWith: nil)!
         roundCorner()
         titleLabel.text = ""
+        tableView.dataSource = self
         tableView.reloadData()
     }
     
