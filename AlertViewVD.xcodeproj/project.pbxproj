@@ -15,6 +15,7 @@
 		678A78F820C707940045CC22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 678A78F720C707940045CC22 /* Assets.xcassets */; };
 		67AA385F20DFF3BE007FFD05 /* TableViewCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67AA385D20DFF3BE007FFD05 /* TableViewCustomCell.swift */; };
 		67AA386020DFF3BE007FFD05 /* TableViewCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67AA385E20DFF3BE007FFD05 /* TableViewCustomCell.xib */; };
+		67AA388D20E1284C007FFD05 /* LargeAlertViewVDView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67B121E420BB4EE800EF28AC /* LargeAlertViewVDView.xib */; };
 		67B121E620BB537900EF28AC /* LargeAlertViewVDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B121E520BB537900EF28AC /* LargeAlertViewVDView.swift */; };
 /* End PBXBuildFile section */
 
@@ -198,6 +199,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67AA388D20E1284C007FFD05 /* LargeAlertViewVDView.xib in Resources */,
 				678A78F820C707940045CC22 /* Assets.xcassets in Resources */,
 				678901D320B6A8390077E4CD /* AlertViewVDView.xib in Resources */,
 				67AA386020DFF3BE007FFD05 /* TableViewCustomCell.xib in Resources */,
