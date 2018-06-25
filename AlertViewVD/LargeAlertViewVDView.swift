@@ -57,7 +57,7 @@ public class LargeAlertViewVDView: UIView {
         setUp()
     }
     
-    var titleText: String {
+    public var titleText: String {
         set{
             titleLabel.text = newValue
         }
