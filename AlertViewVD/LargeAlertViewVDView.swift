@@ -46,7 +46,7 @@ public class LargeAlertViewVDView: UIView {
         }
     }
     
-    init(frame: CGRect, _ array: [TableViewElement]){
+    public init(frame: CGRect, _ array: [TableViewElement]){
         super.init(frame: frame)
         tableViewElements = array
         setUp()
