@@ -57,6 +57,16 @@ public class LargeAlertViewVDView: UIView {
         setUp()
     }
     
+    var titleText: String {
+        set{
+            titleLabel.text = newValue
+        }
+        
+        get{
+            return titleLabel.text ?? ""
+        }
+    }
+    
     private func setUp() {
         tableView.dataSource = self
         let bundle = Bundle(for: type(of: self))
@@ -75,6 +85,7 @@ public class LargeAlertViewVDView: UIView {
         contentView.translatesAutoresizingMaskIntoConstraints = true
         closeImg.image = UIImage(named: "close_default", in: bundle, compatibleWith: nil)!
         roundCorner()
+        titleLabel.text = ""
         tableView.reloadData()
     }
     
